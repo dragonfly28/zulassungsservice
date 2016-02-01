@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	            targetNamespace="KVR_FACT_Q04.xsd">
+    <xs:element name="Ausserbetriebsetzungen">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Satz"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Satz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Ausserbetriebsetzung"/>
+                <xs:element ref="Fahrzeug"/>
+                <xs:element ref="Fahrzeugbrief"/>
+                <xs:element ref="AmtlicheGebuehren"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Ausserbetriebsetzung">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Kennzeichen"/>
+                <xs:element ref="Ausserbetriebsetzungsdatum"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Fahrzeug">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Fahrgestellnummer17"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Fahrzeugbrief">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="FahrzeugbriefNummer"/>
+                <xs:element minOccurs="0" name="FahrzeugbriefNummerNeu"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AmtlicheGebuehren">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="AmtlicheGebuehrenData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AmtlicheGebuehrenData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Schluessel"/>
+                <xs:element ref="Betrag"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Ausserbetriebsetzung -->
+    <xs:element name="Kennzeichen">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="0"/>
+                <xs:maxLength value="8"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="Ausserbetriebsetzungsdatum">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:length value="8"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <!-- Fahrzeug -->
+    <xs:element name="Fahrgestellnummer17">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z0-9]{17}"/>
+                <xs:length value="17"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <!-- Amtliche Gebühren -->
+    <xs:element name="Schluessel" type="xs:string"/>
+    <xs:element name="Betrag">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9,]{11}"/>
+                <xs:maxLength value="11"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

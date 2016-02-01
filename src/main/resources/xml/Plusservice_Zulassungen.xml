@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Document created with online XML Editor http://xmlgrid.net 2016/01/29 13:57:51  -->
+   <Plusservice_Zulassungen>
+         <Dateiheader>
+               <Dateiname>test string</Dateiname>
+               <DateiErzeugungsdatum>test string</DateiErzeugungsdatum>
+               <AnsprechpartnerBmw>test string</AnsprechpartnerBmw>
+               <AnsprechpartnerPlus>test string</AnsprechpartnerPlus>
+               <AnsprechpartnerKvr>test string</AnsprechpartnerKvr>
+               <DateiWorkflowStatus>test string</DateiWorkflowStatus>
+               <Stornierung>test string</Stornierung>
+         </Dateiheader>
+         <Data>
+               <Satz>
+                     <Kopf>
+                           <InfoAbsender>test string</InfoAbsender>
+                           <CardoInternalId>test string</CardoInternalId>
+                           <PlusInternalId>test string</PlusInternalId>
+                           <KvrInternalId>test string</KvrInternalId>
+                           <ZulassungsdienstId>test string</ZulassungsdienstId>
+                           <DokWorkflowStatus>test string</DokWorkflowStatus>
+                           <Stornierung>test string</Stornierung>
+                           <StornierungKlartext>test string</StornierungKlartext>
+                     </Kopf>
+                     <Zulassung>
+                           <Kennzeichen>test string</Kennzeichen>
+                           <Kennzeichenart>test string</Kennzeichenart>
+                           <KleinesKennzeichen>test string</KleinesKennzeichen>
+                           <Erstzulassungsdatum>test string</Erstzulassungsdatum>
+                           <Zulassungsdatum>test string</Zulassungsdatum>
+                           <ZulassungsdatumBis>test string</ZulassungsdatumBis>
+                           <SaisonzeitraumVon>test string</SaisonzeitraumVon>
+                           <SaisonzeitraumBis>test string</SaisonzeitraumBis>
+                     </Zulassung>
+                     <Fahrzeug>
+                           <ABE>test string</ABE>
+                           <Fahrgestellnummer7>test string</Fahrgestellnummer7>
+                           <Fahrgestellnummer10>test string</Fahrgestellnummer10>
+                           <FahrgestellnummerPZ>test string</FahrgestellnummerPZ>
+                           <HerstellerSchluessel>test string</HerstellerSchluessel>
+                           <DatumNaechsteHU>test string</DatumNaechsteHU>
+                           <DatumNaechsteAU>test string</DatumNaechsteAU>
+                           <FarbeSchluessel>test string</FarbeSchluessel>
+                           <Farbe>test string</Farbe>
+                           <Smogplakette>test string</Smogplakette>
+                           <GewerblicheNutzung>test string</GewerblicheNutzung>
+                           <Abholort>test string</Abholort>
+                           <Abholtag>test string</Abholtag>
+                           <Prodland>test string</Prodland>
+                           <Bestimmungsland>test string</Bestimmungsland>
+                     </Fahrzeug>
+                     <Steuer>
+                           <SteuerpflichtAb>test string</SteuerpflichtAb>
+                           <SchluesselSteuerpflichtAb>19</SchluesselSteuerpflichtAb>
+                           <Steuerzeitraum>4</Steuerzeitraum>
+                           <EinheitlicheFaelligkeit>test string</EinheitlicheFaelligkeit>
+                           <SchluesselSteuerbefreiung>test string</SchluesselSteuerbefreiung>
+                           <AnhaengerSteuerZuschlag>1</AnhaengerSteuerZuschlag>
+                           <Einzugsermaechtigung>test string</Einzugsermaechtigung>
+                           <Kontonummer>test string</Kontonummer>
+                           <Bankleitzahl>test string</Bankleitzahl>
+                           <AbweichenderKontoinhaber>test string</AbweichenderKontoinhaber>
+                           <IBAN>test string</IBAN>
+                           <BIC>test string</BIC>
+                     </Steuer>
+                     <Halter>
+                           <Firmennummer>test string</Firmennummer>
+                           <Anredeschluessel>test string</Anredeschluessel>
+                           <Geburtsdatum>test string</Geburtsdatum>
+                           <Geschlecht>test string</Geschlecht>
+                           <Familienname>test string</Familienname>
+                           <Geburtsname>test string</Geburtsname>
+                           <Pseudoname>test string</Pseudoname>
+                           <Namensbestandteile>test string</Namensbestandteile>
+                           <Berufsschluessel>test string</Berufsschluessel>
+                           <AkademischerGrad>test string</AkademischerGrad>
+                           <Vorname>test string</Vorname>
+                           <Geburtsort>test string</Geburtsort>
+                           <Hausnummer>test string</Hausnummer>
+                           <Buchstabe>test string</Buchstabe>
+                           <NrStockwerkWohnung>test string</NrStockwerkWohnung>
+                           <Postleitzahl>test string</Postleitzahl>
+                           <Gemeinde>test string</Gemeinde>
+                           <Strasse>test string</Strasse>
+                           <Wohnungsgeber>test string</Wohnungsgeber>
+                           <Land>test string</Land>
+                     </Halter>
+                     <Standortverantwortlicher>
+                           <StandortverantwortlicherName>test string</StandortverantwortlicherName>
+                           <Anredeschluessel>test string</Anredeschluessel>
+                           <Geburtsdatum>test string</Geburtsdatum>
+                           <Geschlecht>test string</Geschlecht>
+                           <Familienname>test string</Familienname>
+                           <Geburtsname>test string</Geburtsname>
+                           <Pseudoname>test string</Pseudoname>
+                           <Namensbestandteile>test string</Namensbestandteile>
+                           <Berufsschluessel>test string</Berufsschluessel>
+                           <AkademischerGrad>test string</AkademischerGrad>
+                           <Vorname>test string</Vorname>
+                           <Geburtsort>test string</Geburtsort>
+                           <Hausnummer>test string</Hausnummer>
+                           <Buchstabe>test string</Buchstabe>
+                           <NrStockwerkWohnung>test string</NrStockwerkWohnung>
+                           <Postleitzahl>test string</Postleitzahl>
+                           <Gemeinde>test string</Gemeinde>
+                           <Strasse>test string</Strasse>
+                           <Wohnungsgeber>test string</Wohnungsgeber>
+                     </Standortverantwortlicher>
+                     <Fahrzeugbrief>
+                           <FahrzeugbriefNummer>test string</FahrzeugbriefNummer>
+                           <MerkmalAusstellungInternationalerZulassungsschein>test string</MerkmalAusstellungInternationalerZulassungsschein>
+                     </Fahrzeugbrief>
+                     <Versicherung>
+                           <EigeneVersicherung>test string</EigeneVersicherung>
+                           <VersicherungsgesellschaftNummer>test string</VersicherungsgesellschaftNummer>
+                           <VersicherungsBeginn>test string</VersicherungsBeginn>
+                           <VersicherungsZusatz>test string</VersicherungsZusatz>
+                           <NummerVersicherungsschein>test string</NummerVersicherungsschein>
+                           <NummerVertreterOderName>test string</NummerVertreterOderName>
+                           <VersicherungsEnde>test string</VersicherungsEnde>
+                           <Versicherungsform>test string</Versicherungsform>
+                           <Versicherungspraemie>test string</Versicherungspraemie>
+                           <VersicherungsbestaetigungsNummer>test string</VersicherungsbestaetigungsNummer>
+                           <eVB>test string</eVB>
+                     </Versicherung>
+                     <Technik>
+                           <_0.1.FABRIKMARKE>test string</_0.1.FABRIKMARKE>
+                           <_0.2.TYP>test string</_0.2.TYP>
+                           <_0.2.VARIANTE>test string</_0.2.VARIANTE>
+                           <_0.2.VERSION>test string</_0.2.VERSION>
+                           <_0.2.1.HANDELSNAME>test string</_0.2.1.HANDELSNAME>
+                           <_0.4.FAHRZEUGKLASSE>test string</_0.4.FAHRZEUGKLASSE>
+                           <_GENEHMIGUNGSNR>test string</_GENEHMIGUNGSNR>
+                           <_GENEHMIGUNGSDAT>test string</_GENEHMIGUNGSDAT>
+                           <_1.ANZACHS>test string</_1.ANZACHS>
+                           <_3.ANTRIEBSACHS>test string</_3.ANTRIEBSACHS>
+                           <_5.LAENGEMAX>test string</_5.LAENGEMAX>
+                           <_6.BREITEMAX>test string</_6.BREITEMAX>
+                           <_7.HOEHEMAX>test string</_7.HOEHEMAX>
+                           <_13.MASSEFAHRBEREITMAX>test string</_13.MASSEFAHRBEREITMAX>
+                           <_14.3.ZULMAXACHSLAST1>test string</_14.3.ZULMAXACHSLAST1>
+                           <_14.3.ZULMAXACHSLAST2>test string</_14.3.ZULMAXACHSLAST2>
+                           <_14.3.ZULMAXACHSLAST3>test string</_14.3.ZULMAXACHSLAST3>
+                           <_16.1.TECHZULGESAMTM>test string</_16.1.TECHZULGESAMTM>
+                           <_16.2.TECHMAXACHSLAST1>test string</_16.2.TECHMAXACHSLAST1>
+                           <_16.2.TECHMAXACHSLAST2>test string</_16.2.TECHMAXACHSLAST2>
+                           <_16.2.TECHMAXACHSLAST3>test string</_16.2.TECHMAXACHSLAST3>
+                           <_18.3.ZENTRALACHSANH>test string</_18.3.ZENTRALACHSANH>
+                           <_18.4.ZULANHLASTUNGEBR>test string</_18.4.ZULANHLASTUNGEBR>
+                           <_19.STUETZLAST>test string</_19.STUETZLAST>
+                           <_25.HUBRAUM>test string</_25.HUBRAUM>
+                           <_26.CODE_KRAFTSTOFF>test string</_26.CODE_KRAFTSTOFF>
+                           <_26.TX_KRAFTSTOFF>test string</_26.TX_KRAFTSTOFF>
+                           <_27.NENNLEISTKW>test string</_27.NENNLEISTKW>
+                           <_27.BEIUMDREH>test string</_27.BEIUMDREH>
+                           <_27.NENNLEISTKWHYB>test string</_27.NENNLEISTKWHYB>
+                           <_35.BEREIFACHSE1>test string</_35.BEREIFACHSE1>
+                           <_35.BEREIFACHSE2>test string</_35.BEREIFACHSE2>
+                           <_38.CODE_AUFBAU>test string</_38.CODE_AUFBAU>
+                           <_5_AMTL_KLARTEXTAUFBAU>test string</_5_AMTL_KLARTEXTAUFBAU>
+                           <_42.ANZSITZE>test string</_42.ANZSITZE>
+                           <_29.HOECHSTGESCHW>test string</_29.HOECHSTGESCHW>
+                           <_HOECHSTGESCHW_LPG>test string</_HOECHSTGESCHW_LPG>
+                           <_46.STANDGERAEUSCH>test string</_46.STANDGERAEUSCH>
+                           <_46.DREHZSTANDGERAEUSCH>test string</_46.DREHZSTANDGERAEUSCH>
+                           <_46.FAHRGERAEUSCH>test string</_46.FAHRGERAEUSCH>
+                           <_48.ABGASRICHTL>test string</_48.ABGASRICHTL>
+                           <_49.CO2KOMBIBENZINDIESEL>test string</_49.CO2KOMBIBENZINDIESEL>
+                           <_49.CO2GEWICHTET>test string</_49.CO2GEWICHTET>
+                           <_49.CO2KOMBIGAS>test string</_49.CO2KOMBIGAS>
+                           <_49.CO2GEWICHTETGAS>test string</_49.CO2GEWICHTETGAS>
+                           <_49.CO2KOMBISONSTIGE>test string</_49.CO2KOMBISONSTIGE>
+                           <_49.CO2GEWICHTETSONSTIGE>test string</_49.CO2GEWICHTETSONSTIGE>
+                           <_14.1_SLD>test string</_14.1_SLD>
+                           <_52.ANMERKUNGEN>test string</_52.ANMERKUNGEN>
+                           <_22_BEMERKUNGEN_AUSNAHMEN>test string</_22_BEMERKUNGEN_AUSNAHMEN>
+                           <_2.1_HERST_SCHLUESSEL>test string</_2.1_HERST_SCHLUESSEL>
+                           <_2.2_TYP_SCHLUESSEL>test string</_2.2_TYP_SCHLUESSEL>
+                           <_2.2_VVS_SCHLUESSEL>test string</_2.2_VVS_SCHLUESSEL>
+                           <_2.2_TYP_VVS_PRUEFZIFFER>test string</_2.2_TYP_VVS_PRUEFZIFFER>
+                           <_14_NATIONALE_EMIKL>test string</_14_NATIONALE_EMIKL>
+                           <_P.2_NENNLEIST_KW_4>test string</_P.2_NENNLEIST_KW_4>
+                           <_U.1_STANDGERAEUSCH_3>test string</_U.1_STANDGERAEUSCH_3>
+                           <_U.3_FAHRGERAEUSCH_3>test string</_U.3_FAHRGERAEUSCH_3>
+                     </Technik>
+               </Satz>
+         </Data>
+   </Plusservice_Zulassungen>
+ 

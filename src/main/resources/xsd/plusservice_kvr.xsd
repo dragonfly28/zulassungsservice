@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="plusservice_Zulassungen">
+	<xs:element name="Plusservice_Zulassungen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Dateiheader"/>
+				<xs:element ref="Data"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Dateiheader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Dateiname"/>
+				<xs:element ref="DateiErzeugungsdatum"/>
+				<xs:element ref="AnsprechpartnerBmw" minOccurs="0"/>
+				<xs:element ref="AnsprechpartnerPlus" minOccurs="0"/>
+				<xs:element ref="AnsprechpartnerKvr" minOccurs="0"/>
+				<xs:element ref="DateiWorkflowStatus" minOccurs="0"/>
+				<xs:element ref="Stornierung" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Data">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Satz" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Satz">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Kopf"/>
+				<xs:element ref="Zulassung"/>
+				<xs:element ref="Fahrzeug"/>
+				<xs:element ref="Steuer" minOccurs="0"/>
+				<xs:element ref="Halter"/>
+				<xs:element ref="Standortverantwortlicher" minOccurs="0"/>
+				<xs:element ref="Fahrzeugbrief"/>
+				<xs:element ref="Versicherung"/>
+				<xs:element ref="Technik"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Kopf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="InfoAbsender"/>
+				<xs:element ref="CardoInternalId" minOccurs="0"/>
+				<xs:element ref="PlusInternalId" minOccurs="0"/>
+				<xs:element ref="KvrInternalId" minOccurs="0"/>
+				<xs:element ref="ZulassungsdienstId" minOccurs="0" />
+				<xs:element ref="DokWorkflowStatus" minOccurs="0"/>
+				<xs:element ref="Stornierung" minOccurs="0"/>
+				<xs:element ref="StornierungKlartext" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Zulassung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Kennzeichen"/>
+				<xs:element ref="Kennzeichenart"/>
+				<xs:element ref="KleinesKennzeichen"/>
+				<xs:element ref="Erstzulassungsdatum"/>
+				<xs:element ref="Zulassungsdatum"/>
+				<xs:element ref="ZulassungsdatumBis" minOccurs="0"/>
+				<xs:element ref="SaisonzeitraumVon" minOccurs="0"/>
+				<xs:element ref="SaisonzeitraumBis" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Fahrzeug">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ABE"/>
+				<xs:element ref="Fahrgestellnummer7"/>
+				<xs:element ref="Fahrgestellnummer10"/>
+				<xs:element ref="FahrgestellnummerPZ"/>
+				<xs:element ref="HerstellerSchluessel"/>
+				<xs:element ref="DatumNaechsteHU"/>
+				<xs:element ref="DatumNaechsteAU"/>
+				<xs:element ref="FarbeSchluessel"/>
+				<xs:element ref="Farbe"/>
+				<xs:element ref="Smogplakette" minOccurs="0"/>
+				<xs:element ref="GewerblicheNutzung" minOccurs="0"/>
+				<xs:element ref="Abholort" minOccurs="0"/>
+				<xs:element ref="Abholtag" minOccurs="0"/>
+				<xs:element ref="Prodland" minOccurs="0"/>
+				<xs:element ref="Bestimmungsland" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Steuer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SteuerpflichtAb" minOccurs ="0"/>
+				<xs:element ref="SchluesselSteuerpflichtAb" minOccurs ="0"/>
+				<xs:element ref="Steuerzeitraum" minOccurs ="0"/>
+				<xs:element ref="EinheitlicheFaelligkeit" minOccurs ="0"/>
+				<xs:element ref="SchluesselSteuerbefreiung" minOccurs ="0"/>
+				<xs:element ref="AnhaengerSteuerZuschlag" minOccurs ="0"/>
+				<xs:element ref="Einzugsermaechtigung"/>
+				<xs:element ref="Kontonummer"/>
+				<xs:element ref="Bankleitzahl"/>
+				<xs:element ref="AbweichenderKontoinhaber" minOccurs ="0"/>
+				<xs:element ref="IBAN" minOccurs="0"/>
+				<xs:element ref="BIC" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Halter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Firmennummer" minOccurs="0"/>
+				<xs:element ref="Anredeschluessel"/>
+				<xs:element ref="Geburtsdatum"/>
+				<xs:element ref="Geschlecht"/>
+				<xs:element ref="Familienname"/>
+				<xs:element ref="Geburtsname" minOccurs="0"/>
+				<xs:element ref="Pseudoname" minOccurs="0"/>
+				<xs:element ref="Namensbestandteile" minOccurs="0"/>
+				<xs:element ref="Berufsschluessel"/>
+				<xs:element ref="AkademischerGrad" minOccurs="0"/>
+				<xs:element ref="Vorname" minOccurs="0"/>
+				<xs:element ref="Geburtsort"/>
+				<xs:element ref="Hausnummer" minOccurs="0"/>
+				<xs:element ref="Buchstabe" minOccurs="0"/>
+				<xs:element ref="NrStockwerkWohnung" minOccurs="0"/>
+				<xs:element ref="Postleitzahl" minOccurs="0"/>
+				<xs:element ref="Gemeinde"/>
+				<xs:element ref="Strasse"/>
+				<xs:element ref="Wohnungsgeber" minOccurs="0"/>
+				<xs:element ref="Land" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Standortverantwortlicher">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StandortverantwortlicherName"/>
+				<xs:element ref="Anredeschluessel"/>
+				<xs:element ref="Geburtsdatum"/>
+				<xs:element ref="Geschlecht"/>
+				<xs:element ref="Familienname"/>
+				<xs:element ref="Geburtsname"/>
+				<xs:element ref="Pseudoname"/>
+				<xs:element ref="Namensbestandteile"/>
+				<xs:element ref="Berufsschluessel"/>
+				<xs:element ref="AkademischerGrad"/>
+				<xs:element ref="Vorname"/>
+				<xs:element ref="Geburtsort"/>
+				<xs:element ref="Hausnummer" minOccurs="0"/>
+				<xs:element ref="Buchstabe" minOccurs="0"/>
+				<xs:element ref="NrStockwerkWohnung"/>
+				<xs:element ref="Postleitzahl"/>
+				<xs:element ref="Gemeinde"/>
+				<xs:element ref="Strasse"/>
+				<xs:element ref="Wohnungsgeber"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Fahrzeugbrief">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FahrzeugbriefNummer"/>
+				<xs:element ref="MerkmalAusstellungInternationalerZulassungsschein"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Versicherung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EigeneVersicherung"/>
+				<xs:element ref="VersicherungsgesellschaftNummer"/>
+				<xs:element ref="VersicherungsBeginn"/>
+				<xs:element ref="VersicherungsZusatz"/>
+				<xs:element ref="NummerVersicherungsschein" minOccurs="0"/>
+				<xs:element ref="NummerVertreterOderName"/>
+				<xs:element ref="VersicherungsEnde" minOccurs="0"/>
+				<xs:element ref="Versicherungsform" />
+				<xs:element ref="Versicherungspraemie" minOccurs="0"/>
+				<xs:element ref="VersicherungsbestaetigungsNummer" minOccurs="0"/>
+				<xs:element ref="eVB" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:element name="Technik">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="_0.1.FABRIKMARKE" minOccurs="0"/>
+				<xs:element ref="_0.2.TYP" minOccurs="0"/>
+				<xs:element ref="_0.2.VARIANTE" minOccurs="0"/>
+				<xs:element ref="_0.2.VERSION" minOccurs="0"/>
+				<xs:element ref="_0.2.1.HANDELSNAME" minOccurs="0"/>
+				<xs:element ref="_0.4.FAHRZEUGKLASSE" minOccurs="0"/>
+				<xs:element ref="_GENEHMIGUNGSNR" minOccurs="0"/>
+				<xs:element ref="_GENEHMIGUNGSDAT" minOccurs="0"/>
+				<xs:element ref="_1.ANZACHS" minOccurs="0"/>
+				<xs:element ref="_3.ANTRIEBSACHS" minOccurs="0"/>
+				<xs:element ref="_5.LAENGEMAX" minOccurs="0"/>
+				<xs:element ref="_6.BREITEMAX" minOccurs="0"/>
+				<xs:element ref="_7.HOEHEMAX" minOccurs="0"/>
+				<xs:element ref="_13.MASSEFAHRBEREITMAX" minOccurs="0"/>
+				<xs:element ref="_14.3.ZULMAXACHSLAST1" minOccurs="0"/>
+				<xs:element ref="_14.3.ZULMAXACHSLAST2" minOccurs="0"/>
+				<xs:element ref="_14.3.ZULMAXACHSLAST3" minOccurs="0"/>
+				<xs:element ref="_16.1.TECHZULGESAMTM" minOccurs="0"/>
+				<xs:element ref="_16.2.TECHMAXACHSLAST1" minOccurs="0"/>
+				<xs:element ref="_16.2.TECHMAXACHSLAST2" minOccurs="0"/>
+				<xs:element ref="_16.2.TECHMAXACHSLAST3" minOccurs="0"/>
+				<xs:element ref="_18.3.ZENTRALACHSANH" minOccurs="0"/>
+				<xs:element ref="_18.4.ZULANHLASTUNGEBR" minOccurs="0"/>
+				<xs:element ref="_19.STUETZLAST" minOccurs="0"/>
+				<xs:element ref="_25.HUBRAUM" minOccurs="0"/>
+				<xs:element ref="_26.CODE_KRAFTSTOFF" minOccurs="0"/>
+				<xs:element ref="_26.TX_KRAFTSTOFF" minOccurs="0"/>
+				<xs:element ref="_27.NENNLEISTKW" minOccurs="0"/>
+				<xs:element ref="_27.BEIUMDREH" minOccurs="0"/>
+				<xs:element ref="_27.NENNLEISTKWHYB" minOccurs="0"/>
+				<xs:element ref="_35.BEREIFACHSE1" minOccurs="0"/>
+				<xs:element ref="_35.BEREIFACHSE2" minOccurs="0"/>
+				<xs:element ref="_38.CODE_AUFBAU" minOccurs="0"/>
+				<xs:element ref="_5_AMTL_KLARTEXTAUFBAU" minOccurs="0"/>
+				<xs:element ref="_42.ANZSITZE" minOccurs="0"/>
+				<xs:element ref="_29.HOECHSTGESCHW" minOccurs="0"/>
+				<xs:element ref="_HOECHSTGESCHW_LPG" minOccurs="0"/>
+				<xs:element ref="_46.STANDGERAEUSCH" minOccurs="0"/>
+				<xs:element ref="_46.DREHZSTANDGERAEUSCH" minOccurs="0"/>
+				<xs:element ref="_46.FAHRGERAEUSCH" minOccurs="0"/>
+				<xs:element ref="_48.ABGASRICHTL" minOccurs="0"/>
+				<xs:element ref="_49.CO2KOMBIBENZINDIESEL" minOccurs="0"/>
+				<xs:element ref="_49.CO2GEWICHTET" minOccurs ="0"/>
+				<xs:element ref="_49.CO2KOMBIGAS" minOccurs ="0"/>
+				<xs:element ref="_49.CO2GEWICHTETGAS" minOccurs="0"/>
+				<xs:element ref="_49.CO2KOMBISONSTIGE" minOccurs ="0"/>
+				<xs:element ref="_49.CO2GEWICHTETSONSTIGE" minOccurs ="0"/>
+				<xs:element ref="_14.1_SLD" minOccurs="0"/>
+				<xs:element ref="_52.ANMERKUNGEN" minOccurs="0"/>
+				<xs:element ref="_22_BEMERKUNGEN_AUSNAHMEN" minOccurs="0"/>
+				<xs:element ref="_2.1_HERST_SCHLUESSEL"/>
+				<xs:element ref="_2.2_TYP_SCHLUESSEL"/>
+				<xs:element ref="_2.2_VVS_SCHLUESSEL"/>
+				<xs:element ref="_2.2_TYP_VVS_PRUEFZIFFER"/>
+				<xs:element ref="_14_NATIONALE_EMIKL" minOccurs="0"/>
+				<xs:element ref="_P.2_NENNLEIST_KW_4" minOccurs="0"/>
+				<xs:element ref="_U.1_STANDGERAEUSCH_3" minOccurs="0"/>
+				<xs:element ref="_U.3_FAHRGERAEUSCH_3" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+	<!-- Dateiheader -->
+	<xs:element name="Dateiname" type="xs:string"/>
+	<xs:element name="DateiErzeugungsdatum" type="xs:string"/>
+	<xs:element name="AnsprechpartnerBmw" type="xs:string"/>
+	<xs:element name="AnsprechpartnerPlus" type="xs:string"/>
+	<xs:element name="AnsprechpartnerKvr" type="xs:string"/>
+	<xs:element name="DateiWorkflowStatus" type="xs:string"/>
+	<!-- Kopf -->
+	<xs:element name="InfoAbsender">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CardoInternalId" type="xs:string"/>
+	<xs:element name="PlusInternalId" type="xs:string"/>
+	<xs:element name="KvrInternalId" type="xs:string"/>
+  <xs:element name="ZulassungsdienstId" type="xs:string"/>
+  <xs:element name="DokWorkflowStatus" type="xs:string"/>
+	<xs:element name="Stornierung" type="xs:string"/>
+	<xs:element name="StornierungKlartext" type="xs:string"/>
+	<!-- Zulassung -->
+	<xs:element name="Kennzeichen">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Kennzeichenart">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[AN]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="KleinesKennzeichen">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[JN]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Erstzulassungsdatum">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Zulassungsdatum">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ZulassungsdatumBis">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SaisonzeitraumVon">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SaisonzeitraumBis">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"/>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Fahrzeug -->
+	<xs:element name="ABE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[KAEZ]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Fahrgestellnummer7">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="7"/>
+				<xs:pattern value="[a-zA-Z0-9]{7}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Fahrgestellnummer10">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="10"/>
+				<xs:pattern value="[a-zA-Z0-9]{10}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="FahrgestellnummerPZ">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="1"/>
+				<xs:pattern value="[+a-zA-Z0-9]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="HerstellerSchluessel">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DatumNaechsteHU">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DatumNaechsteAU">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="FarbeSchluessel">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Farbe" type="xs:string"/>
+	<xs:element name="Smogplakette" type="xs:string"/>
+	<xs:element name="Abholort" type="xs:string"/>
+	<xs:element name="Abholtag">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Prodland" type="xs:string"/>
+	<xs:element name="Bestimmungsland" type="xs:string"/>
+	<xs:element name="GewerblicheNutzung">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="1"/>
+				<xs:pattern value="[BKLMSTW]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Steuer -->
+	<xs:element name="SteuerpflichtAb">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SchluesselSteuerpflichtAb" default ="19">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="99"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Steuerzeitraum" default ="4">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:pattern value="[4,3,2]" />
+				<xs:totalDigits value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="EinheitlicheFaelligkeit">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SchluesselSteuerbefreiung" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AnhaengerSteuerZuschlag" default="1">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Einzugsermaechtigung">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Kontonummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="12"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Bankleitzahl">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AbweichenderKontoinhaber">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="27"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="IBAN">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="34"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="BIC">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="12"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Halter -->
+	<xs:element name="Firmennummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Anredeschluessel">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="1"/>
+				<xs:pattern value="[0-5]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Geburtsdatum">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Geschlecht">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="1"/>
+				<xs:pattern value="[MWK]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Familienname">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="45"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Geburtsname">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="45"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Pseudoname">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="45"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Namensbestandteile">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="45"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Berufsschluessel">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AkademischerGrad">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Vorname">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Hausnummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minExclusive value="0"/>
+				<xs:maxInclusive value="9999"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Buchstabe">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NrStockwerkWohnung">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Postleitzahl">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Gemeinde">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Strasse">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="24"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Wohnungsgeber">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="26"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Land">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="2"/>
+				<xs:pattern value="[A-Z]{2}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Standortverantwortlicher -->
+	<xs:element name="StandortverantwortlicherName">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Geburtsort">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Fahrzeugbrief -->
+	<xs:element name="FahrzeugbriefNummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="26"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="MerkmalAusstellungInternationalerZulassungsschein">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Versicherung -->
+	<xs:element name="EigeneVersicherung">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[JN]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VersicherungsgesellschaftNummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VersicherungsBeginn">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VersicherungsZusatz">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="9"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NummerVersicherungsschein">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NummerVertreterOderName">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VersicherungsEnde">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Versicherungsform">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Versicherungspraemie">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="VersicherungsbestaetigungsNummer">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="eVB">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="7"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- Technik -->
+	<xs:element name="_0.1.FABRIKMARKE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_0.2.TYP">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_0.2.VARIANTE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_0.2.VERSION">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="35"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_0.2.1.HANDELSNAME">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_0.4.FAHRZEUGKLASSE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_GENEHMIGUNGSNR">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_GENEHMIGUNGSDAT">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_1.ANZACHS">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_3.ANTRIEBSACHS">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_5.LAENGEMAX">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_6.BREITEMAX">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_7.HOEHEMAX">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_13.MASSEFAHRBEREITMAX">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_16.1.TECHZULGESAMTM">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_16.2.TECHMAXACHSLAST1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_16.2.TECHMAXACHSLAST2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_16.2.TECHMAXACHSLAST3">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_14.3.ZULMAXACHSLAST3">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_14.3.ZULMAXACHSLAST2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_14.3.ZULMAXACHSLAST1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_18.3.ZENTRALACHSANH">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_18.4.ZULANHLASTUNGEBR">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_19.STUETZLAST">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_25.HUBRAUM">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_26.CODE_KRAFTSTOFF">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_26.TX_KRAFTSTOFF">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="20"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_27.NENNLEISTKW">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="7"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_27.BEIUMDREH">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_27.NENNLEISTKWHYB">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="7"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_35.BEREIFACHSE1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_35.BEREIFACHSE2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_38.CODE_AUFBAU">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_5_AMTL_KLARTEXTAUFBAU">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_42.ANZSITZE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_29.HOECHSTGESCHW">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_HOECHSTGESCHW_LPG">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_46.STANDGERAEUSCH">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_46.DREHZSTANDGERAEUSCH">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_46.FAHRGERAEUSCH">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_48.ABGASRICHTL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_49.CO2KOMBIBENZINDIESEL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>	
+	<xs:element name="_49.CO2GEWICHTET">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_49.CO2KOMBIGAS">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_49.CO2GEWICHTETGAS">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_49.CO2KOMBISONSTIGE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_49.CO2GEWICHTETSONSTIGE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>	
+	<xs:element name="_14.1_SLD">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_52.ANMERKUNGEN">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="750"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_22_BEMERKUNGEN_AUSNAHMEN">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="700"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_2.1_HERST_SCHLUESSEL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_2.2_TYP_SCHLUESSEL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_2.2_VVS_SCHLUESSEL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="5"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_2.2_TYP_VVS_PRUEFZIFFER">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_14_NATIONALE_EMIKL">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_P.2_NENNLEIST_KW_4">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_U.1_STANDGERAEUSCH_3">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_U.3_FAHRGERAEUSCH_3">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="3"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="_26.1_LEISTUNGSGEW">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>
