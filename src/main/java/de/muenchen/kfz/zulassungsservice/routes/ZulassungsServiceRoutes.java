@@ -22,25 +22,27 @@ public class ZulassungsServiceRoutes extends SpringRouteBuilder {
                 .transform().simple("ref:hello")
                 .to("log:out");
 
-        from("direct:uploaded").toF("file://%s%s", HOME, processedDir + "unknown");
+        //from("direct:uploaded").toF("file://%s%s", HOME, processedDir + "unknown");
         
-//        from("direct:uploaded")
-//                .choice()
-//                .when().xpath("//Ausserbetriebsetzungen")
-//                .to("direct:service1")
-//                .when().xpath("//Plusservice_Zulassungen")
-//                .to("direct:service2")
-//                .otherwise()
-//                .to("direct:unknown");
-//
-//        from("direct:service1")
-//                .toF("file://%s%s", HOME, processedDir + "service1");
-//
-//        from("direct:service2")
-//                .toF("file://%s%s", HOME, processedDir + "service2");
-//
-//        from("direct:unknown")
-//                .toF("file://%s%s", HOME, processedDir + "unknown");
+        from("direct:uploaded")
+                .convertBodyTo(String.class)
+                .choice()
+                .when().xpath("//Plusservice_Zulassungen")
+                .to("direct:service2")
+                .when().xpath("//Ausserbetriebsetzungen")
+                .to("direct:service1")
+                .otherwise()
+                .to("direct:unknown");
+                  
+
+        from("direct:service1")
+                .toF("file://%s%s", HOME, processedDir + "service1");
+
+        from("direct:service2")
+                .toF("file://%s%s", HOME, processedDir + "service2");
+
+        from("direct:unknown")
+                .toF("file://%s%s", HOME, processedDir + "unknown");
 
     }
 
